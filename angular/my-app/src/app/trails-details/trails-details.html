@@ -1,0 +1,25 @@
+<div class="details-container" *ngIf="trail && mountain; else loadingTemplate">
+  
+  <div class="header-section">
+    <h2>{{ trail.name }}</h2>
+    <div class="subtitle">Trail Details</div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-item">
+      <span class="label">Difficulty level</span>
+      <span class="value">{{ trail.difficulty }}</span>
+    </div>
+  </div>
+
+  <div class="mountain-section">
+    <span class="label">Trail is located on the mountain:</span>
+    <div class="value" style="font-size: 1.5rem;">{{ mountain.name }}</div>
+  </div>
+
+  <button class="back-btn" (click)="goBack()">← Back to Mountain Details</button>
+</div>
+
+<ng-template #loadingTemplate>
+  <div class="loading">Loading trail information...</div>
+</ng-template>

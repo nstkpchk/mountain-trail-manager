@@ -1,0 +1,32 @@
+<div class="container">
+  
+  <div class="header-section">
+    <h2>Lista Gór</h2>
+    <button class="add-btn" (click)="goToAdd()">+ Add Mountain</button>
+  </div>
+
+  <div class="grid-container">
+    
+    <ng-container *ngIf="mountains; else noData">
+      <div class="mountain-card" *ngFor="let mountain of mountains">
+        
+        <div class="card-title">{{ mountain.name }}</div>
+
+        <div class="card-actions">
+          <button class="action-btn btn-details" (click)="goToDetails(mountain.id)">Details</button>
+          <button class="action-btn btn-edit" (click)="goToEdit(mountain.id)">Edit</button>
+          <button class="action-btn btn-delete" (click)="deleteMountain(mountain.id)">Delete</button>
+        </div>
+
+      </div>
+    </ng-container>
+
+  </div>
+
+  <ng-template #noData>
+    <div style="text-align: center; color: #7f8c8d; margin-top: 50px;">
+      <p>No mountains to display. Add the first one!</p>
+    </div>
+  </ng-template>
+
+</div>

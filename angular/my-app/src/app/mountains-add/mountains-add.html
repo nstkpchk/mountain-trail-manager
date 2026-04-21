@@ -1,0 +1,16 @@
+<div class="add-container">
+  <h2>Dodaj nową górę</h2>
+  
+  <form [formGroup]="mountainForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="name">Nazwa góry:</label>
+      <input id="name" type="text" formControlName="name" placeholder="Np. Śnieżka">
+    </div>
+
+    <button type="submit" class="submit-btn" [disabled]="mountainForm.invalid">
+      Zapisz górę
+    </button>
+
+  </form>
+</div>

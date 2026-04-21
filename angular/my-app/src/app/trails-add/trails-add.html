@@ -1,0 +1,23 @@
+<div class="add-container">
+  <h2>Dodaj nowy szlak</h2>
+  
+  <form [formGroup]="trailForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="name">Nazwa Szlaku:</label>
+      <input id="name" formControlName="name" placeholder="Np. Główny Szlak Beskidzki">
+    </div>
+
+    <div class="form-group">
+      <label for="difficulty">Poziom trudności:</label>
+      <select id="difficulty" formControlName="difficulty">
+        <option value="" disabled>Wybierz trudność</option>
+        <option value="EASY">Łatwy</option>
+        <option value="MODERATE">Średni</option>
+        <option value="HARD">Trudny</option>
+      </select>
+    </div>
+  
+    <button type="submit" class="submit-btn" [disabled]="trailForm.invalid">Dodaj szlak</button>
+  </form>
+</div>

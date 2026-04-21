@@ -1,0 +1,94 @@
+/* Kontener formularza - styl "karty" */
+.add-container {
+  max-width: 500px;
+  margin: 60px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', sans-serif;
+  border: 1px solid #f0f0f0;
+}
+
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+/* Grupa inputów */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #34495e;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Stylowanie pól tekstowych */
+input, select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #27ae60; /* Zielony akcent */
+}
+
+/* Walidacja - styl błędów */
+input.ng-invalid.ng-touched {
+  border-color: #e74c3c;
+}
+
+/* Przycisk dodawania */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 15px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #219150;
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Link powrotu */
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #7f8c8d;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}

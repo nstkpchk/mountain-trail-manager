@@ -1,0 +1,36 @@
+<div class="details-container">
+  
+  <div class="mountain-header" *ngIf="mountain">
+    <h1>{{ mountain.name }}</h1>
+    
+    <button class="back-btn" (click)="goBack()">← Wróć do listy gór</button>
+  </div>
+
+  <div class="trails-section">
+    <div class="trails-header-row">
+      <h3>Dostępne szlaki</h3>
+      <button class="add-trail-btn" (click)="goToAddTrail()">+ Dodaj nowy szlak</button>
+    </div>
+
+    <ul class="trails-list" *ngIf="trails && trails.length > 0; else noTrails">
+      <li *ngFor="let trail of trails" class="trail-item">
+        
+        <span class="trail-name">{{ trail.name }}</span>
+        
+        <div class="actions-group">
+          <button class="action-btn btn-details" (click)="goToTrailDetails(trail.id)">Szczegóły</button>
+          <button class="action-btn btn-edit" (click)="goToEditTrail(trail.id)">Edytuj</button>
+          <button class="action-btn btn-delete" (click)="deleteTrail(trail.id)">Usuń</button>
+        </div>
+
+      </li>
+    </ul>
+
+    <ng-template #noTrails>
+      <div class="no-data">
+        Ta góra nie ma jeszcze przypisanych żadnych szlaków.
+      </div>
+    </ng-template>
+  </div>
+
+</div>

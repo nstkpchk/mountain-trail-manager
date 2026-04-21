@@ -1,0 +1,17 @@
+<div class="edit-container">
+  <h2>Edytuj górę</h2>
+
+  <form [formGroup]="mountainForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="name">Nazwa:</label>
+      <input id="name" type="text" formControlName="name" placeholder="Wpisz nazwę góry">
+
+      <div *ngIf="mountainForm.controls['name'].invalid && mountainForm.controls['name'].touched" class="error-msg">
+        Nazwa jest wymagana!
+      </div>
+    </div>
+
+    <button type="submit" class="save-btn" [disabled]="mountainForm.invalid">Zapisz zmiany</button>
+  </form>
+</div>

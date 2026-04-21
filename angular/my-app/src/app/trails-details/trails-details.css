@@ -1,0 +1,103 @@
+/* Kontener karty */
+.details-container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', sans-serif;
+  border: 1px solid #f0f0f0;
+}
+
+/* Nagłówek */
+.header-section {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 20px;
+}
+
+h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.subtitle {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+/* Sekcja informacji (Grid klucz-wartość) */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dwie kolumny */
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.label {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #95a5a6;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.value {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* Wyróżnienie nazwy góry */
+.mountain-section {
+  text-align: center;
+  background-color: #e8f5e9; /* Lekki zielony */
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  color: #27ae60;
+}
+
+.mountain-section .label {
+  color: #219150;
+}
+
+/* Przycisk powrotu */
+.back-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.back-btn:hover {
+  background-color: #7f8c8d;
+}
+
+/* Loader (gdyby dane jeszcze nie przyszły) */
+.loading {
+  text-align: center;
+  color: #bdc3c7;
+  margin-top: 50px;
+  font-style: italic;
+}
