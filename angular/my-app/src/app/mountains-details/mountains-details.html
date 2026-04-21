@@ -3,13 +3,13 @@
   <div class="mountain-header" *ngIf="mountain">
     <h1>{{ mountain.name }}</h1>
     
-    <button class="back-btn" (click)="goBack()">← Wróć do listy gór</button>
+    <button class="back-btn" (click)="goBack()">← Back to Mountains List</button>
   </div>
 
   <div class="trails-section">
     <div class="trails-header-row">
-      <h3>Dostępne szlaki</h3>
-      <button class="add-trail-btn" (click)="goToAddTrail()">+ Dodaj nowy szlak</button>
+      <h3>Available Trails</h3>
+      <button class="add-trail-btn" (click)="goToAddTrail()">+ Add New Trail</button>
     </div>
 
     <ul class="trails-list" *ngIf="trails && trails.length > 0; else noTrails">
@@ -18,9 +18,9 @@
         <span class="trail-name">{{ trail.name }}</span>
         
         <div class="actions-group">
-          <button class="action-btn btn-details" (click)="goToTrailDetails(trail.id)">Szczegóły</button>
-          <button class="action-btn btn-edit" (click)="goToEditTrail(trail.id)">Edytuj</button>
-          <button class="action-btn btn-delete" (click)="deleteTrail(trail.id)">Usuń</button>
+          <button class="action-btn btn-details" (click)="goToTrailDetails(trail.id)">Details</button>
+          <button class="action-btn btn-edit" (click)="goToEditTrail(trail.id)">Edit</button>
+          <button class="action-btn btn-delete" (click)="deleteTrail(trail.id)">Delete</button>
         </div>
 
       </li>
@@ -28,7 +28,7 @@
 
     <ng-template #noTrails>
       <div class="no-data">
-        Ta góra nie ma jeszcze przypisanych żadnych szlaków.
+        This mountain doesn't have any trails assigned yet.
       </div>
     </ng-template>
   </div>

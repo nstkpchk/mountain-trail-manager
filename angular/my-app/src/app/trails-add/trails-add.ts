@@ -31,8 +31,8 @@ export class TrailsAdd {
     this.mountainId = this.route.snapshot.paramMap.get('mountainId')!;
     if (this.trailForm.valid) {
       this.mountainService.addTrailToMountain(this.mountainId,this.trailForm.value).subscribe({
-        next: () => this.router.navigate([`/mountains/${this.mountainId}`]), // wraca do listy
-        error: err => console.error('Błąd dodawania trasy:', err)
+        next: () => this.router.navigate([`/mountains/${this.mountainId}`]), 
+        error: err => console.error('Error adding trail:', err)
       });
     }
   }

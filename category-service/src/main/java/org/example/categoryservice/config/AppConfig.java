@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 public class AppConfig {
 
     @Bean
-    @LoadBalanced // <--- To sprawia, że RestTemplate pyta Eurekę o adresy!
+    @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }

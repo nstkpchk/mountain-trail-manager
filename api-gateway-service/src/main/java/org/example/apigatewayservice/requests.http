@@ -1,5 +1,5 @@
 ### ============================================
-### 🏔️ MOUNTAIN CONTROLLER
+### MOUNTAIN CONTROLLER
 ### ============================================
 
 ### 1. Get all mountains
@@ -31,7 +31,7 @@ DELETE http://localhost:8080/api/mountains/9f7d7863-ca4d-4c94-bd84-f88debe3ed22
 
 
 ### ============================================
-### 🥾 TRAIL CONTROLLER
+### TRAIL CONTROLLER
 ### ============================================
 
 ### 6. Get all trails

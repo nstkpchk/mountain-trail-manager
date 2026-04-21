@@ -81,22 +81,15 @@ public class MountainController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteMountain(@PathVariable UUID id){
-        System.out.println("Próba usunięcia UUID: " + id);
 
-        // Wyświetlamy wszystkie UUID w bazie dla debugowania
-        System.out.println("Aktualne UUID w bazie:");
-        mountainService.findAll().forEach(m -> System.out.println(m.getId()));
-
-        // 1️⃣ Usuwamy rekord lokalnie (idempotentnie)
         boolean exists = mountainService.findById(id).isPresent();
         if (exists) {
             mountainService.deleteById(id);
-            System.out.println("Mountain " + id + " został usunięty z category-service");
+            System.out.println("Mountain " + id + " got deleted from category-service");
         } else {
-            System.out.println("Mountain " + id + " nie istnieje w category-service, nic nie usuwamy");
+            System.out.println("Mountain " + id + " does not exist in category-service, nothing to delete");
         }
 
-        // 2️⃣ Zawsze zwracamy 204 – idempotentny DELETE
         return ResponseEntity.noContent().build();
     }
 }

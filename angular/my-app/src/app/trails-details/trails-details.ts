@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; // 1. Import CDR
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; 
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { TrailService } from '../trail-service';
@@ -27,29 +27,29 @@ export class TrailsDetails implements OnInit {
     private trailService: TrailService,
     private mountainService: MountainService,
     private router: Router,
-    private cdr: ChangeDetectorRef // 2. Wstrzyknięcie
+    private cdr: ChangeDetectorRef 
   ) {}
 
   ngOnInit() {
     this.trailId = this.route.snapshot.paramMap.get('trailId')!;
     this.mountainId = this.route.snapshot.paramMap.get('mountainId')!;
 
-    // Pobranie szlaku
+    
     this.trailService.getTrailById(this.trailId).subscribe({
       next: (trail) => {
         this.trail = trail;
-        this.cdr.detectChanges(); // 3. Wymuszenie odświeżenia
+        this.cdr.detectChanges(); 
       },
-      error: (err) => console.error('Błąd pobierania szlaku', err)
+      error: (err) => console.error('Error fetching trail:', err)
     });
 
-    // Pobranie góry
+    
     this.mountainService.getMountainById(this.mountainId).subscribe({
       next: (mountain) => {
         this.mountain = mountain;
-        this.cdr.detectChanges(); // 3. Wymuszenie odświeżenia
+        this.cdr.detectChanges(); 
       },
-      error: (err) => console.error('Błąd pobierania góry', err)
+      error: (err) => console.error('Error fetching mountain:', err)
     });
   }
 

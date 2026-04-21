@@ -30,10 +30,6 @@ public class TrailController {
 
     @GetMapping("/trails")
     public ResponseEntity<List<TrailListDTO>>  listTrails(HttpServletRequest request){
-        // ------
-        System.out.println(">>> [ELEMENT-SERVICE] Obsługuję żądanie GET /api/trails. Wątek: " + Thread.currentThread().getName());
-        System.out.println(">>> [ELEMENT-SERVICE] Mój adres lokalny (kontener): " + request.getLocalAddr());
-        // --------------------------------
         List<TrailListDTO> trails = trailService.findAll().stream()
                 .map(t->{
                     TrailListDTO dto = new TrailListDTO();

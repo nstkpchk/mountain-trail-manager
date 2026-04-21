@@ -1,26 +1,26 @@
 <div class="edit-container">
-  <h2>Edytuj szlak</h2>
+  <h2>Edit Trail</h2>
 
   <form [formGroup]="trailForm" (ngSubmit)="onSubmit()">
     
     <div class="form-group">
-      <label for="name">Nazwa:</label>
-      <input id="name" formControlName="name" placeholder="Wpisz nazwę szlaku">
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" placeholder="Enter trail name">
       
       <div *ngIf="trailForm.controls['name'].invalid && trailForm.controls['name'].touched" class="error-msg">
-        Nazwa jest wymagana!
+        Name is required!
       </div>
     </div>
 
     <div class="form-group">
-      <label for="difficulty">Trudność:</label>
-      <input id="difficulty" formControlName="difficulty" placeholder="Wpisz trudność szlaku (np. EASY)">
+      <label for="difficulty">Difficulty:</label>
+      <input id="difficulty" formControlName="difficulty" placeholder="Enter trail difficulty (e.g., EASY)">
       
       <div *ngIf="trailForm.controls['difficulty'].invalid && trailForm.controls['difficulty'].touched" class="error-msg">
-          Trudność jest wymagana!
+          Difficulty is required!
       </div>
     </div>
 
-    <button type="submit" class="save-btn" [disabled]="trailForm.invalid">Zapisz zmiany</button>
+    <button type="submit" class="save-btn" [disabled]="trailForm.invalid">Save Changes</button>
   </form>
 </div>

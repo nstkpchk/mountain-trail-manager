@@ -20,8 +20,8 @@ export class MountainsAdd {
   onSubmit() {
     if (this.mountainForm.valid) {
       this.mountainService.addMountain(this.mountainForm.value).subscribe({
-        next: () => this.router.navigate(['/mountains']), // wraca do listy
-        error: err => console.error('Błąd dodawania góry:', err)
+        next: () => this.router.navigate(['/mountains']), 
+        error: err => console.error('Error adding mountain:', err)
       });
     }
   }

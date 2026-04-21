@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; // 1. Import
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; 
 import { MountainService } from '../mountain-service';
 import { ActivatedRoute } from '@angular/router';
 import { Mountain } from '../mountain.model';
@@ -24,7 +24,7 @@ export class MountainsDetails implements OnInit {
     private mountainService: MountainService,
     private trailService: TrailService,
     private router: Router,
-    private cdr: ChangeDetectorRef // 2. Wstrzyknięcie
+    private cdr: ChangeDetectorRef 
   ) {}
 
   ngOnInit(): void {
@@ -37,22 +37,22 @@ export class MountainsDetails implements OnInit {
     this.mountainService.getMountainById(this.mountainId).subscribe({
       next: (m) => {
         this.mountain = m;
-        this.cdr.detectChanges(); // 3. Odświeżenie widoku (góra)
+        this.cdr.detectChanges(); 
       },
-      error: (err) => console.error('Błąd pobierania góry:', err)
+      error: (err) => console.error('Error fetching mountain:', err)
     });
   }
 
   loadTrails() {
-    this.trails = []; // czyść przed requestem!
+    this.trails = []; 
     this.trailService.getTrailsByMountain(this.mountainId).subscribe({
       next: (t) => {
         this.trails = t ?? [];
         this.cdr.detectChanges();
       },
       error: (err) => {
-        this.trails = []; // przy błędzie też czyść
-        console.error('Błąd pobierania tras:', err);
+        this.trails = []; 
+        console.error('Error fetching trails:', err);
       }
     });
   }
@@ -61,9 +61,9 @@ export class MountainsDetails implements OnInit {
 
     this.trailService.deleteTrail(id).subscribe({
       next: () => {
-        this.loadTrails(); // Ponowne pobranie i odświeżenie listy
+        this.loadTrails();
       },
-      error: (err) => console.error('Błąd usuwania trasy:', err)
+      error: (err) => console.error('Error deleting trail:', err)
     });
   }
 

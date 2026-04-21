@@ -7,5 +7,5 @@ spring:
 
 eureka:
   client:
-    register-with-eureka: false # Serwer nie rejestruje sam siebie
+    register-with-eureka: false
     fetch-registry: false

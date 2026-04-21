@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; // 1. Import
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { MountainService } from '../mountain-service';
 import { Mountain } from '../mountain.model';
 import { CommonModule } from '@angular/common';
@@ -18,7 +18,7 @@ export class Mountains implements OnInit {
   constructor(
     private mountainService: MountainService,
     private router: Router,
-    private cdr: ChangeDetectorRef // 2. Wstrzyknięcie
+    private cdr: ChangeDetectorRef
   ) {}
   
   ngOnInit(): void {
@@ -28,9 +28,9 @@ export class Mountains implements OnInit {
   loadMountains() {
     this.mountainService.getAllMountains().subscribe({
       next: (data) => {
-        console.log('Otrzymane dane:', data);
+        console.log('Received data:', data);
         this.mountains = data;
-        this.cdr.detectChanges(); // 3. Wymuszenie odświeżenia widoku
+        this.cdr.detectChanges(); 
       },
       error: (err) => console.error(err)
     });
@@ -39,18 +39,21 @@ export class Mountains implements OnInit {
  deleteMountain(id: string) {
   this.mountainService.deleteMountain(id).subscribe({
     next: () => {
-      // ✅ TO JEST KLUCZOWE: 
-      // Dopiero gdy serwer potwierdzi usunięcie (kod 204), pobieramy nową listę.
       this.loadMountains(); 
     },
     error: (err) => {
-      console.error('Nie udało się usunąć:', err);
+      console.error('Error deleting mountain:', err);
     }
   });
 }
 
-  // ... (reszta metod bez zmian)
-  goToAdd() { this.router.navigate(['/mountains/add']); }
-  goToEdit(id: string) { this.router.navigate([`/mountains/edit/${id}`]); }
-  goToDetails(id: string) { this.router.navigate([`/mountains/${id}`]); }
+  goToAdd() {
+     this.router.navigate(['/mountains/add']); 
+    }
+  goToEdit(id: string) { 
+    this.router.navigate([`/mountains/edit/${id}`]); 
+  }
+  goToDetails(id: string) { 
+    this.router.navigate([`/mountains/${id}`]); 
+  }
 }

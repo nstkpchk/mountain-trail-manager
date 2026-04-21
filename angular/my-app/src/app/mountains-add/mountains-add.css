@@ -1,4 +1,4 @@
-/* Kontener formularza - wygląda jak karta na środku */
+
 .add-container {
   max-width: 500px;
   margin: 60px auto;
@@ -17,7 +17,7 @@ h2 {
   font-size: 1.8rem;
 }
 
-/* Stylowanie grupy inputów */
+
 .form-group {
   margin-bottom: 25px;
 }
@@ -30,7 +30,7 @@ label {
   font-size: 0.95rem;
 }
 
-/* Nowoczesny input */
+
 input {
   width: 100%;
   padding: 12px 15px;
@@ -38,15 +38,15 @@ input {
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s;
-  box-sizing: border-box; /* Ważne, żeby padding nie rozpychał inputa */
+  box-sizing: border-box; 
 }
 
 input:focus {
   outline: none;
-  border-color: #27ae60; /* Ten sam zielony co na liście */
+  border-color: #27ae60; 
 }
 
-/* Przycisk akcji */
+
 .submit-btn {
   width: 100%;
   padding: 14px;
@@ -66,7 +66,7 @@ input:focus {
   transform: translateY(-2px);
 }
 
-/* Styl dla nieaktywnego przycisku (gdy formularz jest pusty) */
+
 .submit-btn:disabled {
   background-color: #bdc3c7;
   cursor: not-allowed;

@@ -1,4 +1,4 @@
-/* Główny kontener - karta na środku */
+
 .details-container {
   max-width: 900px;
   margin: 40px auto;
@@ -9,7 +9,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* --- Sekcja Nagłówka Góry --- */
+
 .mountain-header {
   border-bottom: 2px solid #f0f0f0;
   padding-bottom: 20px;
@@ -39,7 +39,7 @@
 }
 .back-btn:hover { background-color: #7f8c8d; }
 
-/* --- Sekcja Szlaków --- */
+
 .trails-section {
   margin-top: 20px;
 }
@@ -57,7 +57,7 @@
   margin: 0;
 }
 
-/* Przycisk dodawania szlaku (zielony) */
+
 .add-trail-btn {
   background-color: #27ae60;
   color: white;
@@ -75,7 +75,7 @@
   transform: translateY(-2px);
 }
 
-/* --- Lista Szlaków (Kafelki w liście) --- */
+
 .trails-list {
   list-style: none;
   padding: 0;
@@ -107,7 +107,7 @@
   color: #2d3436;
 }
 
-/* Grupa przycisków akcji */
+
 .actions-group {
   display: flex;
   gap: 8px;
@@ -129,7 +129,7 @@
 .btn-edit    { background-color: #fff3cd; color: #856404; }
 .btn-delete  { background-color: #ffe5e5; color: #d63031; }
 
-/* Obsługa braku danych */
+
 .no-data {
   text-align: center;
   color: #b2bec3;

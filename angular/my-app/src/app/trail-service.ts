@@ -12,7 +12,7 @@ export class TrailService {
   constructor(private http: HttpClient) {}
 
   getTrailsByMountain(mountainId: string): Observable<Trail[]> {
-    return this.http.get<Trail[]>(`${this.apiUrl}?mountainId=${mountainId}`);
+    return this.http.get<Trail[]>(`/api/mountains/${mountainId}/trails`);
   }
 
   getTrailById(id: string): Observable<Trail> {

@@ -1,4 +1,4 @@
-/* Kontener - karta na środku ekranu */
+
 .edit-container {
   max-width: 500px;
   margin: 60px auto;
@@ -17,7 +17,7 @@ h2 {
   font-size: 1.8rem;
 }
 
-/* Grupa inputów */
+
 .form-group {
   margin-bottom: 25px;
 }
@@ -30,7 +30,7 @@ label {
   font-size: 0.95rem;
 }
 
-/* Wygląd inputów */
+
 input, select {
   width: 100%;
   padding: 12px 15px;
@@ -44,10 +44,10 @@ input, select {
 
 input:focus, select:focus {
   outline: none;
-  border-color: #27ae60; /* Zielony akcent */
+  border-color: #27ae60; 
 }
 
-/* Walidacja - czerwony tekst */
+
 .error-msg {
   color: #e74c3c;
   font-size: 0.85rem;
@@ -55,7 +55,7 @@ input:focus, select:focus {
   display: block;
 }
 
-/* Przycisk zapisu */
+
 .save-btn {
   width: 100%;
   padding: 14px;
@@ -80,7 +80,7 @@ input:focus, select:focus {
   cursor: not-allowed;
 }
 
-/* Link powrotu */
+
 .back-link {
   display: block;
   text-align: center;

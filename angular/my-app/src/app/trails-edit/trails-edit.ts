@@ -33,7 +33,7 @@ export class TrailsEdit {
     this.mountainId = this.route.snapshot.paramMap.get('mountainId')!;
     this.trailId = this.route.snapshot.paramMap.get('id')!;
     if (!this.trailId) {
-      console.error('Brak ID w URL!');
+      console.error('No trail ID in URL!');
       this.router.navigate(['/mountains']);
       return;
     }
@@ -44,7 +44,7 @@ export class TrailsEdit {
           difficulty: trail.difficulty
         });
       },
-      error: err => console.error('Błąd pobierania szlaku:', err)
+      error: err => console.error('Error fetching trail:', err)
     });
   }
 
@@ -54,7 +54,7 @@ export class TrailsEdit {
       this.trailService.updateTrail(this.trailId, this.trailForm.value)
         .subscribe({
           next: () => this.router.navigate([`/mountains/${this.mountainId}`]),
-          error: err => console.error('Błąd aktualizacji szlaku:', err)
+          error: err => console.error('Error updating trail:', err)
         });
     }
   }

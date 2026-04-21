@@ -1,4 +1,4 @@
-/* Kontener formularza - styl "karty" */
+
 .add-container {
   max-width: 500px;
   margin: 60px auto;
@@ -17,7 +17,7 @@ h2 {
   font-size: 1.8rem;
 }
 
-/* Grupa inputów */
+
 .form-group {
   margin-bottom: 20px;
 }
@@ -30,7 +30,7 @@ label {
   font-size: 0.95rem;
 }
 
-/* Stylowanie pól tekstowych */
+
 input, select {
   width: 100%;
   padding: 12px 15px;
@@ -44,15 +44,15 @@ input, select {
 
 input:focus, select:focus {
   outline: none;
-  border-color: #27ae60; /* Zielony akcent */
+  border-color: #27ae60; 
 }
 
-/* Walidacja - styl błędów */
+
 input.ng-invalid.ng-touched {
   border-color: #e74c3c;
 }
 
-/* Przycisk dodawania */
+
 .submit-btn {
   width: 100%;
   padding: 14px;
@@ -78,7 +78,7 @@ input.ng-invalid.ng-touched {
   transform: none;
 }
 
-/* Link powrotu */
+
 .back-link {
   display: block;
   text-align: center;

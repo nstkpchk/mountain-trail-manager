@@ -1,15 +1,15 @@
 <div class="add-container">
-  <h2>Dodaj nową górę</h2>
+  <h2>Add new Mountain</h2>
   
   <form [formGroup]="mountainForm" (ngSubmit)="onSubmit()">
     
     <div class="form-group">
-      <label for="name">Nazwa góry:</label>
-      <input id="name" type="text" formControlName="name" placeholder="Np. Śnieżka">
+      <label for="name">Mountain Name:</label>
+      <input id="name" type="text" formControlName="name" placeholder="e.g., Mount Everest">
     </div>
 
     <button type="submit" class="submit-btn" [disabled]="mountainForm.invalid">
-      Zapisz górę
+      Save Mountain
     </button>
 
   </form>

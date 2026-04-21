@@ -26,10 +26,9 @@ export class MountainsEdit {
   ) {}
 
   ngOnInit() {
-    // Pobranie ID z URL
     this.mountainId = this.route.snapshot.paramMap.get('id')!;
     if (!this.mountainId) {
-    console.error('Brak ID w URL!');
+    console.error('No mountain ID in URL!');
     this.router.navigate(['/mountains']); 
     return;
     }
@@ -39,7 +38,7 @@ export class MountainsEdit {
           name: mountain.name
         });
       },
-      error: err => console.error('Błąd pobierania góry:', err)
+      error: err => console.error('Error fetching mountain:', err)
     });
   }
 
@@ -48,7 +47,7 @@ export class MountainsEdit {
       this.mountainService.updateMountain(this.mountainId, this.mountainForm.value)
         .subscribe({
           next: () => this.router.navigate(['/mountains']),
-          error: err => console.error('Błąd aktualizacji góry:', err)
+          error: err => console.error('Error updating mountain:', err)
         });
     }
   }

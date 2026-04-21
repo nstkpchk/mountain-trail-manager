@@ -1,4 +1,4 @@
-/* Główny kontener - centruje treść i daje marginesy */
+
 .container {
   max-width: 1000px;
   margin: 40px auto;
@@ -6,7 +6,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Nagłówek z tytułem i przyciskiem dodawania */
 .header-section {
   display: flex;
   justify-content: space-between;
@@ -21,7 +20,6 @@
   font-weight: 700;
 }
 
-/* Przycisk "Dodaj górę" - zielony, zachęcający */
 .add-btn {
   background-color: #27ae60;
   color: white;
@@ -40,14 +38,13 @@
   box-shadow: 0 6px 12px rgba(39, 174, 96, 0.3);
 }
 
-/* Siatka (Grid) - to robi robotę! Kafelki układają się same */
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 25px;
 }
 
-/* Wygląd pojedynczego kafelka (karty) */
 .mountain-card {
   background: white;
   border-radius: 16px;
@@ -59,14 +56,12 @@
   border: 1px solid #f0f0f0;
 }
 
-/* Efekt "uniesienia" karty po najechaniu myszką */
 .mountain-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
   border-color: #e0e0e0;
 }
 
-/* Tytuł góry na karcie */
 .card-title {
   font-size: 1.4rem;
   font-weight: 600;
@@ -74,12 +69,11 @@
   margin-bottom: 10px;
 }
 
-/* Informacje dodatkowe (wysokość itp.) */
 .card-info {
   color: #7f8c8d;
   font-size: 0.95rem;
   margin-bottom: 20px;
-  flex-grow: 1; /* Wypycha przyciski na dół */
+  flex-grow: 1; 
 }
 
 .card-info span {
@@ -87,7 +81,6 @@
   margin-bottom: 5px;
 }
 
-/* Kontener na przyciski akcji na dole karty */
 .card-actions {
   display: flex;
   justify-content: space-between;
@@ -97,7 +90,6 @@
   border-top: 1px solid #eee;
 }
 
-/* Bazowy styl przycisków akcji */
 .action-btn {
   padding: 8px 16px;
   border-radius: 8px;
@@ -106,10 +98,9 @@
   cursor: pointer;
   border: none;
   transition: background 0.2s;
-  flex: 1; /* Przyciski zajmują równą szerokość */
+  flex: 1; 
 }
 
-/* Kolory poszczególnych przycisków */
 .btn-details {
   background-color: #eef2f7;
   color: #2c3e50;
